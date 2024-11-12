@@ -1,0 +1,17 @@
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+
+alias v="vim"
+alias vi="vim"
+
+
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias push="git push"
+alias pull="git pull"
+
+alias d="docker"
+alias k="kubectl"
+alias kctx="kubectx"
