@@ -4,7 +4,6 @@ alias grep="grep --color=auto"
 alias v="vim"
 alias vi="vim"
 
-
 alias g="git"
 alias gs="git status"
 alias ga="git add"
