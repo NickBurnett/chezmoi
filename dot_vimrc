@@ -1,0 +1,17 @@
+filetype indent on
+filetype on
+filetype plugin on
+
+set cursorcolumn
+set cursorline
+
+set shiftwidth=4
+set tabstop=4
+set expandtab
+set scrolloff=10
+
+set nocompatible
+set number
+
+syntax on
+
