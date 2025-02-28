@@ -78,12 +78,9 @@ autoload -Uz _zinit
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
 
-#zinit light zsh-users/git
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
-#zinit light zsh-users/zsh-autocomplete
 
 source $ZSH/oh-my-zsh.sh
 
