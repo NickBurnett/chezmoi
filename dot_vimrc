@@ -13,6 +13,7 @@ set scrolloff=10
 
 set nocompatible
 set number
+set term=xterm
 
 syntax on
 
