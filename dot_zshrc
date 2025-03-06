@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
 # Basic ZSHRC
+autoload -Uz compinit
+compinit
 
 # ZINIT
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -9,6 +11,9 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load Theme
+[[ -f ~/.zsh_theme ]] && source ~/.zsh_theme
 
 # Plugin Initialization
 zinit light zsh-users/zsh-autosuggestions
