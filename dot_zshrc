@@ -38,3 +38,5 @@ export NVM_DIR="$HOME/.nvm"
 # Datadog-specific
 [[ -f ~/.datadog ]] && source ~/.datadog
 
+true
+
