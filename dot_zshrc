@@ -31,9 +31,11 @@ export PATH="$PATH:/usr/local/go/bin"
 # Add NVM to PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/zsh_completion" ] && \. "$NVM_DIR/zsh_completion"  # This loads nvm bash_completion
 
+# Completions
 [[ -f ~/.k8s_completion ]] && source ~/.k8s_completion
+[[ -f ~/.docker_completion ]] && source ~/.docker_completion
+[[ -f "$NVM_DIR/zsh_completion" ]] && source "$NVM_DIR/zsh_completion"
 
 # Datadog-specific
 [[ -f ~/.datadog ]] && source ~/.datadog
