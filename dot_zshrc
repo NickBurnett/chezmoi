@@ -18,10 +18,11 @@ autoload -Uz _zinit
 # Plugin Initialization
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
-zinit light marlonrichert/zsh-autocomplete
+#zinit light marlonrichert/zsh-autocomplete
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
+#bindkey -v
 
 [[ -f ~/.aliases ]] && source ~/.aliases
 [[ -f ~/.homebrewrc ]] && source ~/.homebrewrc
@@ -37,6 +38,20 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f ~/.k8s_completion ]] && source ~/.k8s_completion
 [[ -f ~/.docker_completion ]] && source ~/.docker_completion
 [[ -f "$NVM_DIR/zsh_completion" ]] && source "$NVM_DIR/zsh_completion"
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# History Configuration
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=5000
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 # Datadog-specific
 [[ -f ~/.datadog ]] && source ~/.datadog
