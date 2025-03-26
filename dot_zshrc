@@ -4,6 +4,14 @@
 autoload -Uz compinit
 compinit
 
+# Oh-My-Zsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+
+plugins=(git)
+
+source "$ZSH/oh-my-zsh.sh"
+
 # ZINIT
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -11,9 +19,6 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-
-# Load Theme
-[[ -f ~/.zsh_theme ]] && source ~/.zsh_theme
 
 # Plugin Initialization
 zinit light zsh-users/zsh-autosuggestions
@@ -39,19 +44,6 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f ~/.docker_completion ]] && source ~/.docker_completion
 [[ -f "$NVM_DIR/zsh_completion" ]] && source "$NVM_DIR/zsh_completion"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-
-# History Configuration
-HISTSIZE=5000
-HISTFILE=~/.zsh_history
-SAVEHIST=5000
-HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt incappendhistory
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
 
 # Datadog-specific
 [[ -f ~/.datadog ]] && source ~/.datadog
