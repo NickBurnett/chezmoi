@@ -4,8 +4,10 @@ alias chez="chezmoi"
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 
-alias v="vim"
-alias vi="vim"
+alias n="nvim"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
 
 alias g="git"
 alias gs="git status"
