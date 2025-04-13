@@ -1,14 +1,21 @@
 #!/usr/bin/env zsh
-alias chez="chezmoi"
 
+# Chezmoi
+alias chez="chezmoi"
+alias chezpush="chezmoi git add . && chezmoi git commit && chezmoi git push"
+alias chezpull="chezmoi update --apply"
+
+# Bash
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 
+# Neovim
 alias n="nvim"
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
+# Git
 alias g="git"
 alias gs="git status"
 alias ga="git add"
@@ -16,7 +23,9 @@ alias gc="git commit"
 alias push="git push"
 alias pull="git pull"
 
+# Docker + Kubernetes
 alias d="docker"
 alias k="kubectl"
 alias kctx="kubectx"
 alias mk="minikube"
+
