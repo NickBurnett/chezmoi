@@ -6,7 +6,8 @@ return {
 
 		configs.setup({
 			ensure_installed = {
-				"lua"
+				"lua",
+				"toml",
 			},
 			sync_install = false,
 			highlight = { enable = true },

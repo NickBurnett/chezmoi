@@ -3,3 +3,8 @@ startup_mode = "Maximized"
 
 [font]
 size = 32
+
+[keyboard]
+bindings = [
+{ key = "Backspace", mods = "Super", chars = "\u0015" },
+]
