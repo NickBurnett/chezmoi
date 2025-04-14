@@ -45,5 +45,8 @@ export NVM_DIR="$HOME/.nvm"
 [[ -f "$NVM_DIR/zsh_completion" ]] && source "$NVM_DIR/zsh_completion"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+# Dependencies
+#[[ -f ~/.rc/install_dependencies.sh ]] && source ~/.rc/install_dependencies.sh
+
 true
 

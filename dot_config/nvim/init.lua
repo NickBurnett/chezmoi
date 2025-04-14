@@ -5,5 +5,5 @@ require("config.lazy")
 vim.opt.number = true
 
 -- Theme
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("kanagawa")
 
