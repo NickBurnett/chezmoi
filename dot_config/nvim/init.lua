@@ -1,5 +1,5 @@
 -- Dependencies
-require("config.lazy")
+require("init.lazy")
 
 -- NVIM Options
 vim.opt.number = true

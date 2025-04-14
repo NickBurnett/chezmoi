@@ -28,3 +28,5 @@ require("lazy").setup({
 	checker = { enabled = true },
 })
 
+-- Add config files
+require("config")
