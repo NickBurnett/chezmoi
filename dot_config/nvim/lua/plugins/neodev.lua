@@ -1,4 +1,10 @@
 return {
 	"folke/neodev.nvim",
-	opts = {}
+        name = "neodev",
+	opts = {},
+        priority = 1000,
+        lazy = false,
+        config = function()
+                require("neodev").setup({})
+        end
 }
