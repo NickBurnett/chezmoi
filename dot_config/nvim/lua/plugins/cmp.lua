@@ -9,6 +9,12 @@ return {
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 	},
+        opts = function(_, opts)
+                opts.sources = opts.sources or {}
+                table.insert(opts.sources, {
+                        name = "lazydev",
+                })
+        end,
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")

@@ -7,6 +7,7 @@ return {
 	config = function()
 		local builtin = require("telescope.builtin")
 
+                vim.keymap.set("n", "<leader>fG", builtin.live_grep, { desc = "Live Grep" })
 		vim.keymap.set("n", "<leader>ff", function()
 			builtin.find_files({
 				prompt_title = "Directory Search",
@@ -17,7 +18,7 @@ return {
 				}
 			})
 		end, { desc = "Find files" })
-		vim.keymap.set("n", "<leader>fG", function()
+		vim.keymap.set("n", "<leader>fF", function()
 			builtin.find_files({
 				prompt_title = "Global Search",
 				cwd = vim.fn.expand("~"),
