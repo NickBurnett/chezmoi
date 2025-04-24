@@ -12,9 +12,13 @@ return {
 				"lua",
 				"toml",
 			},
+                        ignore_install = {},
+                        auto_install = true,
+                        modules = {},
 			sync_install = false,
 			highlight = { enable = true },
 			indent = { enable = true },
+                        autotag = { enable = true },
 		})
 	end,
 }

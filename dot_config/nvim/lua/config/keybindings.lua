@@ -2,4 +2,4 @@ vim.keymap.set({ "i" }, "<M-BS>", "<C-w>")
 vim.keymap.set({ "n" }, "<leader>qq", function()
         vim.cmd("q!")
 end)
-
+vim.keymap.set({ "n" }, "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic message" })
