@@ -58,13 +58,7 @@ return {
 					end
 				end, { "i", "s" }),
 			        ["<C-e>"] = cmp.mapping.abort(),
-                                ["<CR>"] = cmp.mapping(function(fallback)
-                                        if cmp.visible() and cmp.get_selected_entry() then
-                                                cmp.config({ behavior = cmp.ConfirmBehavior.Insert, select = false })
-                                        else
-                                                fallback()
-                                        end
-                                end, { "i", "s" }),
+                                ["<CR>"] = cmp.mapping.confirm({ select = false }),
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },

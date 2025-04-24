@@ -2,15 +2,29 @@ return {
 	"nvim-telescope/telescope.nvim",
         name = "telescope",
 	dependencies = {
-		"nvim-lua/plenary.nvim"
+		"nvim-lua/plenary.nvim",
+                "nvim-telescope/telescope-fzf-native.nvim"
 	},
 	config = function()
+                telescope = require("telescope")
+                telescope.setup({
+                        extensions = {
+                                fzf = {
+                                        fuzzy = true,
+                                        override_generic_sorter = true,
+                                        override_file_sorter = true,
+                                        case_mode = "smart_case",
+                                }
+                        }
+                })
+                telescope.load_extension("fzf")
+
 		local builtin = require("telescope.builtin")
 
                 vim.keymap.set("n", "<leader>fG", builtin.live_grep, { desc = "Live Grep" })
 		vim.keymap.set("n", "<leader>ff", function()
 			builtin.find_files({
-				prompt_title = "Directory Search",
+				prompt_title = "Directory File Search",
 				find_command = {
 					"fd",
 					"--type", "f",
@@ -20,7 +34,7 @@ return {
 		end, { desc = "Find files" })
 		vim.keymap.set("n", "<leader>fF", function()
 			builtin.find_files({
-				prompt_title = "Global Search",
+				prompt_title = "Global File Search",
 				cwd = vim.fn.expand("~"),
 				find_command = {
 					"fd",
