@@ -13,6 +13,7 @@ size = 28
 [keyboard]
 bindings = [
 	{ key = "Backspace", mods = "Super", chars = "\u0015" },
+        { key = "Space", mods = "Alt", chars = "\u0002"},
 	{ key = "ArrowLeft", mods = "Option", chars = "\u001b\u0062" },
 	{ key = "ArrowRight", mods = "Option", chars = "\u001b\u0066" },
 ]

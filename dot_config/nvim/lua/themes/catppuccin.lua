@@ -9,6 +9,9 @@ return {
                 require("catppuccin").setup({
                         flavour = "macchiato",
                         transparent_background = true,
+                        integrations = {
+                                nvimtree = true,
+                        }
                 })
         end
 }
