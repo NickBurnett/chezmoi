@@ -1,6 +1,11 @@
 [window]
 startup_mode = "Maximized"
 
+[general]
+import = [
+        "~/.config/alacritty/themes/catppuccin_macchiato.toml"
+]
+
 [font]
 normal = { family = "Hack Nerd Font Propo", style = "Regular" }
 size = 28

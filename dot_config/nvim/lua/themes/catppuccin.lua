@@ -8,6 +8,9 @@ return {
         config = function()
                 require("catppuccin").setup({
                         flavour = "macchiato",
+                        integrations = {
+                                bufferline = true,
+                        }
                 })
         end
 }
