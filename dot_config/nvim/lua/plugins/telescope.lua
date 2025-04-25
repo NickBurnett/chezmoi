@@ -3,10 +3,11 @@ return {
         name = "telescope",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-                "nvim-telescope/telescope-fzf-native.nvim"
+                "nvim-telescope/telescope-fzf-native.nvim",
+                "nvim-telescope/telescope-ui-select.nvim",
 	},
 	config = function()
-                telescope = require("telescope")
+                local telescope = require("telescope")
                 telescope.setup({
                         extensions = {
                                 fzf = {
@@ -14,10 +15,14 @@ return {
                                         override_generic_sorter = true,
                                         override_file_sorter = true,
                                         case_mode = "smart_case",
+                                },
+                                ["ui-select"] = {
+                                        require("telescope.themes").get_dropdown({})
                                 }
                         }
                 })
                 telescope.load_extension("fzf")
+                telescope.load_extension("ui-select")
 
 		local builtin = require("telescope.builtin")
 

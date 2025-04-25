@@ -9,6 +9,11 @@ end)
 -- Diagnostic Bindings
 vim.keymap.set({ "n" }, "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic message" })
 
+-- LSP Bindings
+vim.keymap.set({ "n" }, "<leader>hh", vim.lsp.buf.hover, {})
+vim.keymap.set({ "n" }, "<leader>jd", vim.lsp.buf.definition, {})
+vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+
 -- Bufferline Bindings
 vim.keymap.set({ "n" }, "H", function()
         vim.cmd("BufferLineCyclePrev")
