@@ -29,5 +29,5 @@ install() {
 pkgman update
 
 # Install "fd"
-install fd ripgrep
+install fd ripgrep fzf
 
