@@ -15,6 +15,11 @@ alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
+# Tmux
+alias t="tmux"
+alias tls="tmux ls"
+alias ta="tmux attach -t"
+
 # Git
 alias g="git"
 alias gs="git status"
