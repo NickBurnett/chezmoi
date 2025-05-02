@@ -1,3 +1,4 @@
 require("lsp.bash")
-require("lsp.lua")
 require("lsp.go")
+require("lsp.lua")
+require("lsp.python")

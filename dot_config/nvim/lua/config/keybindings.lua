@@ -31,6 +31,10 @@ vim.keymap.set({ "n" }, "<leader>Fc", function()
         vim.cmd("BufferLinePickClose")
 end, { desc = "Close a buffer" })
 
+vim.keymap.set({ "n" }, "<leader>qf", function()
+    vim.cmd("BufferLinePickClose")
+end, { desc = "Close a buffer" })
+
 -- NVIM Tree Bindings
 vim.keymap.set({ "n" }, "<leader>t", function()
         if vim.bo.filetype == "NvimTree" then

@@ -31,12 +31,11 @@ return {
             sorting = {
                 priority_weight = 2,
                 comparators = {
+                    compare.offset,
                     compare.exact,
                     compare.score,
                     compare.recently_used,
-                    compare.length,
-                    compare.offset,
-                    compare.order,
+                    compare.kind
                 }
             },
             snippet = {
@@ -65,7 +64,7 @@ return {
                     else
                         fallback()
                     end
-                end, { "i", "s" }),
+                 end, { "i", "s" }),
                 ["<S-Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         cmp.select_prev_item()
