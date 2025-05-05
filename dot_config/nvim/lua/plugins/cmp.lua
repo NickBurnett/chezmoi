@@ -56,15 +56,19 @@ return {
                         cmp.complete()
                     end
                 end, { "i", "s" }),
-                ["<Tab>"] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        cmp.select_next_item()
-                    elseif luasnip.jumpable(-1) then
-                        luasnip.jump(-1)
-                    else
-                        fallback()
-                    end
-                 end, { "i", "s" }),
+                -- ["<Tab>"] = cmp.mapping(function(fallback)
+                -- print("before")
+                --                         fallback()
+                --                         print("after")
+                --     -- if cmp.visible() then
+                --     --     cmp.select_next_item()
+                --     -- elseif luasnip.jumpable(-1) then
+                --     --     luasnip.jump(-1)
+                --     -- else
+                --     --     -- vim.api.nvim_out_write(vim.inspect(debug.getinfo(fallback)) .. "\n")
+                --     --     vim.api.nvim_feedkeys("\t", "in", true)
+                --     -- end
+                --  end, { "i", "s" }),
                 ["<S-Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         cmp.select_prev_item()
@@ -91,3 +95,4 @@ return {
         ]])
     end,
 }
+

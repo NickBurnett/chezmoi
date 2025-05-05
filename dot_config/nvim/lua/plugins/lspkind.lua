@@ -3,3 +3,4 @@ return {
     name = "lspkind",
     event = "InsertEnter",
 }
+

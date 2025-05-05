@@ -30,3 +30,4 @@ require("lazy").setup({
 
 -- Add config files
 require("config")
+

@@ -1,3 +1,4 @@
+vim.keymap.set({ "i" }, "<F4>", "<Tab>")
 -- Text Editing Bindings
 vim.keymap.set({ "i" }, "<M-BS>", "<C-w>")
 
@@ -43,3 +44,4 @@ vim.keymap.set({ "n" }, "<leader>t", function()
                 vim.cmd("NvimTreeOpen")
         end
 end, { desc = "" })
+

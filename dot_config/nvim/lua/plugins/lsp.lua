@@ -10,3 +10,4 @@ return {
         vim.fn.sign_define("DiagnosticSignInfo",  { text = "", texthl = "DiagnosticSignInfo" })
     end
 }
+

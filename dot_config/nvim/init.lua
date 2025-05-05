@@ -9,3 +9,4 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Theme
 vim.cmd.colorscheme "catppuccin"
+
