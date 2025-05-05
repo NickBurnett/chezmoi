@@ -47,8 +47,8 @@ return {
                 autocomplete = { require("cmp.types").cmp.TriggerEvent.TextChanged },
             },
             mapping = cmp.mapping.preset.insert({
-                ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-                ["<C-f>"] = cmp.mapping.scroll_docs(4),
+                ["<C-k>"] = cmp.mapping.scroll_docs(-4),
+                ["<C-j>"] = cmp.mapping.scroll_docs(4),
                 ["<C-Space>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         cmp.abort()
@@ -56,19 +56,15 @@ return {
                         cmp.complete()
                     end
                 end, { "i", "s" }),
-                -- ["<Tab>"] = cmp.mapping(function(fallback)
-                -- print("before")
-                --                         fallback()
-                --                         print("after")
-                --     -- if cmp.visible() then
-                --     --     cmp.select_next_item()
-                --     -- elseif luasnip.jumpable(-1) then
-                --     --     luasnip.jump(-1)
-                --     -- else
-                --     --     -- vim.api.nvim_out_write(vim.inspect(debug.getinfo(fallback)) .. "\n")
-                --     --     vim.api.nvim_feedkeys("\t", "in", true)
-                --     -- end
-                --  end, { "i", "s" }),
+                ["<Tab>"] = cmp.mapping(function(fallback)
+                    if cmp.visible() then
+                        cmp.select_next_item()
+                    elseif luasnip.jumpable(-1) then
+                        luasnip.jump(-1)
+                    else
+                        fallback()
+                    end
+                 end, { "i", "s" }),
                 ["<S-Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         cmp.select_prev_item()
