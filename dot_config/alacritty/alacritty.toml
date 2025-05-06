@@ -7,7 +7,7 @@ import = [
 ]
 
 [font]
-normal = { family = "Hack Nerd Font Propo", style = "Regular" }
+normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 size = 28
 
 [keyboard]
