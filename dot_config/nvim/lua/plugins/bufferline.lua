@@ -13,6 +13,10 @@ return {
                 bufferline.setup({
                         highlights = require("catppuccin.groups.integrations.bufferline").get(),
                         options = {
+                                custom_filter = function(bufnr)
+                                        local ft = vim.bo[bufnr].filetype
+                                        return ft ~= "lspinfo"
+                                end,
                                 diagnostics = "nvim_lsp",
                                 separator_style = "thin",
                                 themable = true,

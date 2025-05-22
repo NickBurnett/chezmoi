@@ -42,6 +42,7 @@ export NVM_DIR="$HOME/.nvm"
 # Completions
 [[ -f ~/.k8s_completion ]] && source ~/.k8s_completion
 [[ -f ~/.docker_completion ]] && source ~/.docker_completion
+[[ -f ~/.helm_completion ]] && source ~/.helm_completion
 [[ -f "$NVM_DIR/zsh_completion" ]] && source "$NVM_DIR/zsh_completion"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 

@@ -3,6 +3,10 @@ return {
         name = "nvim-tree",
         config = function()
                 local nvimtree = require("nvim-tree")
-                nvimtree.setup({})
+                nvimtree.setup({
+                        git = {
+                                ignore = false,
+                        }
+                })
         end
 }

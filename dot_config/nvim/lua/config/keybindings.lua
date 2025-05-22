@@ -1,9 +1,9 @@
-vim.keymap.set({ "i" }, "<F4>", "<Tab>")
 -- Text Editing Bindings
 vim.keymap.set({ "i" }, "<M-BS>", "<C-w>")
 
 -- Vim Bindings
-vim.keymap.set({ "n" }, "<leader>qq", function()
+vim.keymap.set({ "n" }, "<leader>Q", function()
+        vim.cmd("NvimTreeClose")
         vim.cmd("q!")
 end)
 
@@ -24,17 +24,20 @@ vim.keymap.set({ "n" }, "L", function()
         vim.cmd("BufferLineCycleNext")
 end, { desc = "Cycle next buffer" })
 
-vim.keymap.set({ "n" }, "<leader>Ff", function()
+vim.keymap.set({ "n" }, "<leader>ef", function()
         vim.cmd("BufferLinePick")
 end, { desc = "Select a buffer" })
-
-vim.keymap.set({ "n" }, "<leader>Fc", function()
-        vim.cmd("BufferLinePickClose")
-end, { desc = "Close a buffer" })
 
 vim.keymap.set({ "n" }, "<leader>qf", function()
     vim.cmd("BufferLinePickClose")
 end, { desc = "Close a buffer" })
+
+vim.keymap.set({ "n" }, "<leader>qq", function()
+        local cmd = "bd! "
+        local bufIdxToDelete = vim.api.nvim_get_current_buf()
+        vim.cmd("BufferLineCyclePrev")
+        vim.cmd(cmd .. bufIdxToDelete)
+end, { desc = "Close current buffer" })
 
 -- NVIM Tree Bindings
 vim.keymap.set({ "n" }, "<leader>t", function()
@@ -43,5 +46,5 @@ vim.keymap.set({ "n" }, "<leader>t", function()
         else
                 vim.cmd("NvimTreeOpen")
         end
-end, { desc = "" })
+end, { desc = "Toggle File View" })
 

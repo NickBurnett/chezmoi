@@ -59,8 +59,8 @@ return {
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         cmp.select_next_item()
-                    elseif luasnip.jumpable(-1) then
-                        luasnip.jump(-1)
+                    elseif luasnip.expand_or_jumpable() and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()] then
+                        luasnip.expand_or_jump()
                     else
                         fallback()
                     end
