@@ -4,7 +4,7 @@ vim.keymap.set({ "i" }, "<M-BS>", "<C-w>")
 -- Vim Bindings
 vim.keymap.set({ "n" }, "<leader>Q", function()
         vim.cmd("NvimTreeClose")
-        vim.cmd("q")
+        vim.cmd("q!")
 end)
 
 -- Diagnostic Bindings
@@ -24,6 +24,14 @@ vim.keymap.set({ "n" }, "L", function()
         vim.cmd("bnext")
 end, { desc = "Cycle next buffer" })
 
+vim.keymap.set({ "n" }, "<leader><Up>", function()
+        vim.cmd("tabnew")
+end, { desc = "Create new tab" })
+
+vim.keymap.set({ "n" }, "<leader><Down>", function()
+        vim.cmd("tabclose")
+end, { desc = "Close current tab" })
+
 vim.keymap.set({ "n" }, "<leader><Left>", function()
         vim.cmd("tabprev")
 end, { desc = "Cycle previous tab" })
@@ -32,19 +40,24 @@ vim.keymap.set({ "n" }, "<leader><Right>", function()
         vim.cmd("tabnext")
 end, { desc = "Cycle next tab" })
 
+vim.keymap.set({ "n" }, "<leader>H", function()
+        vim.cmd("tabprev")
+end, { desc = "Cycle prev tab" })
+
+vim.keymap.set({ "n" }, "<leader>L", function()
+        vim.cmd("tabnext")
+end, { desc = "Cycle next tab" })
+
 vim.keymap.set({ "n" }, "<leader>ef", function()
-        vim.cmd("BufferLinePick")
-end, { desc = "Select a buffer" })
+        vim.cmd("b")
+end, { desc = "Select current buffer" })
 
 vim.keymap.set({ "n" }, "<leader>qf", function()
-    vim.cmd("BufferLinePickClose")
-end, { desc = "Close a buffer" })
+        vim.cmd("bd")
+end, { desc = "Close current buffer" })
 
 vim.keymap.set({ "n" }, "<leader>qq", function()
-        local cmd = "bd! "
-        local bufIdxToDelete = vim.api.nvim_get_current_buf()
-        vim.cmd("BufferLineCyclePrev")
-        vim.cmd(cmd .. bufIdxToDelete)
+        vim.cmd("bd!")
 end, { desc = "Close current buffer" })
 
 -- NVIM Tree Bindings
