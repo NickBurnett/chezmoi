@@ -4,7 +4,6 @@
 alias chez="chezmoi"
 alias chezpush="chezmoi git add . && chezmoi git commit && chezmoi git push"
 alias chezpull="chezmoi update --apply"
-
 # Bash
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"

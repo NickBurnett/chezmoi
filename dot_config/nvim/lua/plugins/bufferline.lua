@@ -1,6 +1,7 @@
 return {
         "akinsho/bufferline.nvim",
         name = "bufferline",
+        enabled = false,
         dependencies = {
                 "nvim-tree/nvim-web-devicons",
         },
@@ -21,6 +22,7 @@ return {
                                 separator_style = "thin",
                                 themable = true,
                                 mode = "buffers",
+
                         }
                 })
         end
