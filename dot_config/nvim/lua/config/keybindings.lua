@@ -11,9 +11,9 @@ end)
 vim.keymap.set({ "n" }, "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic message" })
 
 -- LSP Bindings
-vim.keymap.set({ "n" }, "<leader>hh", vim.lsp.buf.hover, {})
-vim.keymap.set({ "n" }, "<leader>jd", vim.lsp.buf.definition, {})
-vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+vim.keymap.set({ "n" }, "<leader>hh", vim.lsp.buf.hover, { desc = "LSP Hover Description" })
+vim.keymap.set({ "n" }, "<leader>jd", vim.lsp.buf.definition, { desc = "LSP Jump-to-definition" })
+vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code Actions" })
 
 -- Bufferline Bindings
 vim.keymap.set({ "n" }, "H", function()
