@@ -15,6 +15,7 @@ return {
                                 "lua_ls",
                                 "pyright",
                                 "taplo",
+                                "ts_ls",
                                 "yamlls",
                         },
                 })
