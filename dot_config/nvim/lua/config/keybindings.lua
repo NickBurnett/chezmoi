@@ -7,6 +7,9 @@ vim.keymap.set({ "n" }, "<leader>Q", function()
         vim.cmd("q!")
 end)
 
+-- Window Bindings
+vim.keymap.set({ "n" }, "<leader>w", "<C-W>", { desc = "Window Management" })
+
 -- Diagnostic Bindings
 vim.keymap.set({ "n" }, "<leader>d", vim.diagnostic.open_float, { desc = "Show diagnostic message" })
 
@@ -14,6 +17,9 @@ vim.keymap.set({ "n" }, "<leader>d", vim.diagnostic.open_float, { desc = "Show d
 vim.keymap.set({ "n" }, "<leader>hh", vim.lsp.buf.hover, { desc = "LSP Hover Description" })
 vim.keymap.set({ "n" }, "<leader>jd", vim.lsp.buf.definition, { desc = "LSP Jump-to-definition" })
 vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code Actions" })
+vim.keymap.set({ "n" }, "<leader>fm", vim.lsp.buf.format, { desk = "Format File" })
+vim.keymap.set({ "n" }, "<leader>rn", vim.lsp.buf.rename, { desk = "Rename Entity" })
+vim.keymap.set({ "n" }, "<leader>gr", require("telescope.builtin").lsp_references, { desk = "Get References" })
 
 -- Bufferline Bindings
 vim.keymap.set({ "n" }, "H", function()
