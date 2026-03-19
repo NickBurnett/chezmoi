@@ -1,7 +1,0 @@
-require("lsp.bash")
-require("lsp.docker")
-require("lsp.go")
-require("lsp.helm")
-require("lsp.lua")
-require("lsp.python")
-require("lsp.yaml")
