@@ -17,6 +17,7 @@ compinit
 # Basic Config
 dotfiles_dirpath="$HOME/.dotfiles"
 dotfiles_filepaths=(
+	"omz.sh"
 	"aliases.sh"
 )
 
