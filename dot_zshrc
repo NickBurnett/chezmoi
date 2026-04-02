@@ -1,0 +1,25 @@
+#!/usr/bin/env zsh
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=100000
+SAVEHIST=1000000
+setopt autocd nomatch notify
+unsetopt extendedglob
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename "/home/nick/.zshrc"
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# Basic Config
+dotfiles_dirpath="~/.dotfiles/"
+dotfiles_filepaths=(
+	"aliases.sh"
+)
+
+for df in "${dotfiles_filepaths[@]}"; do
+	[[ -f "$dotfiles_dirpath/$df" ]] && source "$dotfiles_dirpath/$df"
+done
