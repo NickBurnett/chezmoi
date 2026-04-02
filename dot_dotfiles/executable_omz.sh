@@ -5,7 +5,7 @@ omz_dirpath="$HOME/.oh-my-zsh"
 [[ ! -d "$omz_dirpath" ]] && exit 0
 
 # Basic Config
-ZSH_THEME="robbyrussel"
+ZSH_THEME="robbyrussell"
 plugins=(
 	git
 )
