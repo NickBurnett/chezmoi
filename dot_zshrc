@@ -15,7 +15,7 @@ compinit
 # End of lines added by compinstall
 
 # Basic Config
-dotfiles_dirpath="~/.dotfiles"
+dotfiles_dirpath="$HOME/.dotfiles"
 dotfiles_filepaths=(
 	"aliases.sh"
 )
