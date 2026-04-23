@@ -1,2 +1,7 @@
 [font]
 size = 18.0
+
+[keyboard]
+bindings = [
+	{ key = "Space", mods="Alt", chars = "\u001b\u0020" }
+]
