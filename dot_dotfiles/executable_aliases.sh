@@ -6,6 +6,7 @@ alias v="nvim"
 alias pm="pacman"
 alias chez="chezmoi"
 alias g="git"
+alias t="tmux"
 
 # Base
 ## Mainly for configuring defaults for CLI tools.
