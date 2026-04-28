@@ -1,0 +1,29 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.font.size": "1.2rem",
+  "menus.power.lowBatteryNotification": false,
+  "menus.power.showLabel": true,
+  "theme.bar.floating": false,
+  "theme.bar.location": "top",
+  "bar.autoHide": "never",
+  "theme.bar.buttons.enableBorders": false,
+  "theme.bar.buttons.network.enableBorder": false,
+  "bar.network.label": true,
+  "bar.network.truncation": true,
+  "bar.battery.label": true,
+  "bar.battery.hideLabelWhenFull": false,
+  "theme.bar.transparent": true,
+  "theme.bar.buttons.style": "default",
+  "theme.bar.opacity": 30,
+  "theme.bar.buttons.opacity": 100,
+  "theme.bar.buttons.background_opacity": 30,
+  "theme.bar.buttons.monochrome": false,
+  "theme.bar.menus.card_radius": "0.4em",
+  "theme.bar.menus.cards": "#1e1e2e",
+  "theme.bar.menus.border.size": "0.13em",
+  "theme.bar.menus.border.radius": "0.7em",
+  "theme.osd.opacity": 100,
+  "theme.bar.buttons.modules.power.enableBorder": false
+}
