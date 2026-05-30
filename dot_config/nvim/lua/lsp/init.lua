@@ -1,2 +1,2 @@
-require("c.lua")
+require("lsp.c")
 require("lsp.lua")

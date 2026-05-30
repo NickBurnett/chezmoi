@@ -1,7 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	name = "nvim-lspconfig",
-	event = { "BufReadPre", "BufNewFile" },
+	-- event = { "BufReadPre", "BufNewFile" },
 	opts = function(_, opts)
 		return {
 			diagnostics = {
@@ -32,5 +32,6 @@ return {
 		}
 	end,
 	config = function()
+                require("lsp")
 	end
 }
