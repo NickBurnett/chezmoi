@@ -6,6 +6,9 @@ vim.lsp.config("lua_ls", {
 	filetypes = { "lua" },
 	settings = {
 		Lua = {
+                        diagnostics = {
+                                globals = { "vim" },
+                        },
 			runtime = {
 				version = "LuaJIT"
 			}
