@@ -17,7 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.maplocalleader = "\\"
 
-
 require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
@@ -30,6 +29,5 @@ require("lazy").setup({
 		border = "rounded"
 	}
 })
-
 require("lsp")
 require("config")
