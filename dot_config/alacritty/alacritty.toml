@@ -1,7 +1,14 @@
+[general]
+import = [
+        "~/.config/alacritty/themes/cappuccin_macchiato.toml"
+]
+
 [font]
+normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 size = 18.0
 
 [keyboard]
 bindings = [
-	{ key = "Space", mods="Alt", chars = "\u001b\u0020" }
+	# { key = "Space", mods="Alt", chars = "\u001b\u0020" }
+	{ key = "Space", mods="Alt", chars = "\u0001" }
 ]
