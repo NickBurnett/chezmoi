@@ -21,6 +21,8 @@ dotfiles_filepaths=(
 	"aliases.sh"
 )
 
+export PATH="/home/$USER/.local/bin:$PATH"
+
 for df in "${dotfiles_filepaths[@]}"; do
 	[[ -f "$dotfiles_dirpath/$df" ]] && source "$dotfiles_dirpath/$df"
 done
