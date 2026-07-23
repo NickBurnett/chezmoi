@@ -18,6 +18,7 @@ trust_level = "trusted"
 [tui]
 status_line = ["model-with-reasoning", "current-dir", "model", "reasoning", "five-hour-limit", "weekly-limit", "fast-mode"]
 status_line_use_colors = true
+vim_mode_default = true
 
 [tui.model_availability_nux]
 "gpt-5.5" = 3
