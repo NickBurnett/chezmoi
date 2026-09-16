@@ -7,6 +7,8 @@ alias pm="pacman"
 alias chez="chezmoi"
 alias g="git"
 alias t="tmux"
+alias tls="tmux ls"
+alias ta="tmux attach -t"
 
 # Base
 ## Mainly for configuring defaults for CLI tools.
